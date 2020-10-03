@@ -5,3 +5,7 @@ body {
   background-size: cover;
   -o-background-size: cover;
 }
+
+.fa_custom {
+  color: #00080a
+  }

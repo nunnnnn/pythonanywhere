@@ -18,11 +18,11 @@ class Vegetable(models.Model):
     vegetable_name = models.CharField(max_length=200)
     season = models.CharField(max_length=50)
 
-class price(models.Model):
-    price_vegetable = models.IntegerField(max_length=50)
+#class price(models.Model):
+ #   price_vegetable = models.IntegerField(max_length=50)
 
-class season(models.Model):
-    season_name = models.IntegerField(max_length=200)
+#class season(models.Model):
+ #   season_name = models.IntegerField(max_length=200)
 
 
 

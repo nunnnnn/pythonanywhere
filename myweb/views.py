@@ -9,7 +9,8 @@ from django.contrib.auth import login
 def index(request):
     return render(request,'myweb/index.html')
 
-
+def contract(request):
+    return render(request,'myweb/contract.html')
 
 def sign_up(request):
     context = {}
