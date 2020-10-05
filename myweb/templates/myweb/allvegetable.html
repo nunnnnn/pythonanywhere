@@ -1,0 +1,27 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vegetable Four Season</title>
+  <link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link href="static/style.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="http://image.free.in.th/v/2013/ih/200925032857.png"   
+</head>
+
+<div class="container">
+  <div class="card border-0 shadow my-5">
+    <div class="card-body p-5">
+      <h1 class="font-weight-light">ผักทั้งหมด</h1>
+      <br>
+      {% for i in vegetable %}
+    <p>{{ i.id }}</p><br>
+    <p>{{ i.vegetable_Name }}</p><br>
+    <p>{{ i.Price }}</p><br>
+    <p>{{ i.Season }}</p><br>
+    {% endfor %}
+    </div>
+  </div>
+</div>
+</html>

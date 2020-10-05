@@ -1,31 +1,28 @@
 from django.db import models
 from django.contrib.auth.models import User
-class Question(models.Model):
-    question_text = models.CharField(max_length=200)
-    pub_date = models.DateTimeField('date published')
+class Season(models.Model):
+    
+
+    id = models.AutoField(primary_key=True)
+
+    SeasonName = models.CharField(max_length=100,default="ฤดูร้อน")
 
     def __str__(self):
-        return f'{self.question_text}'
+        return f'{self.SeasonName}'
 
-class Choice(models.Model):
-    question = models.ForeignKey(Question, on_delete=models.CASCADE)
-    choice_text = models.CharField(max_length=200)
-    votes = models.IntegerField(default=0)
+class Farm(models.Model):
+    id = models.AutoField(primary_key=True)
+    Farm_Name = models.CharField(max_length=100,default="ชื่อฟาร์ม")
 
-
+    def __str__(self):
+        return f'{self.Farm_Name}'
 class Vegetable(models.Model):
-    vegetable_type =models.CharField(max_length=50)
-    vegetable_name = models.CharField(max_length=200)
-    season = models.CharField(max_length=50)
+    Vegetable_Name = models.CharField(max_length=100)
+    Price = models.FloatField()
 
-#class price(models.Model):
- #   price_vegetable = models.IntegerField(max_length=50)
+    FarmName = models.ForeignKey(Farm, on_delete=models.CASCADE)
+    Season = models.ForeignKey(Season, on_delete=models.CASCADE)
 
-#class season(models.Model):
- #   season_name = models.IntegerField(max_length=200)
-
-
-
-    #def __str__(self):
-     #   return f'{self.question.question_text} - {self.choice_text} - {self.votes}'
-
+    def __str__(self):
+        
+        return f'{self.Vegetable_Name} - {self.Season} - {self.FarmName}'

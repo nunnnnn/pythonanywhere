@@ -8,5 +8,9 @@ urlpatterns = [
    path('', aunt_views.LoginView.as_view(template_name='myweb/login.html'), name='login'),
    path('signup', views.sign_up, name='signup'), 
    path('logout',views.logout, name='logout'),
-   path('contract',views.contract, name='contract')
+   path('contract',views.contract, name='contract'),
+   path('addvegetable',views.addvegetable, name='addvegetable'),
+  # path('allvegetable',views.allvegetable, name='allvegetable'),
+  # path('showvegetable',views.showvegetable, name='showvegetable'),
+   path('search',views.search, name='search'),
 ]
