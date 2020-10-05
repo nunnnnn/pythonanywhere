@@ -36,7 +36,7 @@ def logout(req):
 
 
 
-def showVgetable(testrequestreq):
+def showVegetable(testrequestreq):
     vegetable = Vegetable.objects.all()
     return render(testrequestreq ,'myweb/allvegetable.html' ,{'vegetable':vegetable})
 

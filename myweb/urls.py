@@ -10,7 +10,7 @@ urlpatterns = [
    path('logout',views.logout, name='logout'),
    path('contract',views.contract, name='contract'),
    path('addvegetable',views.addvegetable, name='addvegetable'),
-  # path('allvegetable',views.allvegetable, name='allvegetable'),
-  # path('showvegetable',views.showvegetable, name='showvegetable'),
+   path('allvegetable',views.showVegetable, name='allvegetable'),
+  
    path('search',views.search, name='search'),
 ]
