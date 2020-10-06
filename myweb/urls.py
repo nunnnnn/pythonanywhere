@@ -11,6 +11,5 @@ urlpatterns = [
    path('contract',views.contract, name='contract'),
    path('addvegetable',views.addvegetable, name='addvegetable'),
    path('allvegetable',views.showVegetable, name='allvegetable'),
-  
    path('search',views.search, name='search'),
 ]

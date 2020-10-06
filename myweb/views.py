@@ -32,6 +32,7 @@ def logout(req):
     logout_user(req)
     return redirect('login')
 
+
 #--------DB----#
 
 

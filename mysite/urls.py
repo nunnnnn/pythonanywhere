@@ -5,4 +5,5 @@ from myweb import urls
 urlpatterns = [
     path('', include('myweb.urls')),
     path('admin/', admin.site.urls),
+   
 ]
