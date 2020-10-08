@@ -7,20 +7,49 @@
   <title>Vegetable Four Season</title>
   <link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link href="static/style.css" rel="stylesheet">
-  <link rel="icon" type="image/png" href="http://image.free.in.th/v/2013/ih/200925032857.png"   
+  <link rel="icon" type="image/png" href="http://image.free.in.th/v/2013/ih/200925032857.png">
 </head>
 
+<style>
+  table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
 <div class="container">
   <div class="card border-0 shadow my-5">
     <div class="card-body p-5">
       <h1 class="font-weight-light">ผักทั้งหมด</h1>
       <br>
-      {% for i in vegetable %}
-    <p>{{ i.id }}</p><br>
-    <p>{{ i.Vegetable_Name }}</p><br>
-    <p>{{ i.Price }}</p><br>
-    <p>{{ i.Season }}</p><br>
-    {% endfor %}
+      <table>        
+        <tr>         
+          <th>ID</th>
+          <th>Vegetable</th>
+          <th>Price</th>
+          <th>Season </th>   
+          {% for i in vegetable %}              
+        </tr>
+        <tr>    
+              
+          <td>{{ i.id }}</td>
+          <td>{{ i.Vegetable_Name }}</td>
+          <td>{{ i.Price }}</td>
+          <td>{{ i.Season }}</td> 
+          {% endfor %}     
+        </tr>  
+             
+      </table>     
     </div>
   </div>
 </div>
