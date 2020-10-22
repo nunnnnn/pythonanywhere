@@ -17,9 +17,6 @@ class addVegetable(ModelForm):
 
 searchchoices = (
         (1 , 'ชื่อผัก'),
-        (2 , 'ราคา'),
-        (3 , 'ฤดู'),
-        (4 , 'ชื่อฟาร์ม'),
     )
 
 class SearchForm(forms.Form):
