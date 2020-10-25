@@ -5,8 +5,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 
-from .form import *
-from .models import Farm,Vegetable,Season
+#from .form import *
+#from .models import Farm,Vegetable,Season
 
 def index(request):
     return render(request,'myweb/index.html')

@@ -1,8 +1,9 @@
 from django.contrib import admin
 
-from .models import Vegetable , Farm , Season
+from .models import Question , Destination , Choice, Oxes
 
 
-admin.site.register(Vegetable)
-admin.site.register(Farm)
-admin.site.register(Season)
+admin.site.register( Question)
+admin.site.register(Destination)
+admin.site.register( Choice)
+admin.site.register( Oxes)
